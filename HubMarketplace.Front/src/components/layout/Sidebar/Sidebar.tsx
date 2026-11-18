@@ -68,7 +68,18 @@ function ProfileSection({isSidebarExpanded}: {isSidebarExpanded: boolean}){
                 </div>
             </div>
         </div>
+
     )
 }
 
+function LogoSection({isSidebarExpanded, onToggle,} :  {isSidebarExpanded: boolean; onToggle: () => void}){
+    return(
+        <div className='p-4 pb-2 flex justify-between items-center'>
+            <img src="vit.svg" alt="" className={`overflow-hidden transition-all ${isSidebarExpanded ? 'w-13' : 'w-0'}`} />
+            <button onClick={onToggle} className='p-1.5 rounded-lg bg-gray-50 hover:bg-gray-100'>
+                {isSidebarExpanded ? <ChevronFirst/> : <ChevronLast/>}
+            </button>
+        </div>
+    )
+}
     
