@@ -82,4 +82,15 @@ function LogoSection({isSidebarExpanded, onToggle,} :  {isSidebarExpanded: boole
         </div>
     )
 }
+
+export function SidebarItem({icon, text, isActive, hasAlert} : SidebarMenuItemProps){
+    return(
+        <li className={`
+            relative flex items-center py-2 px-3 my-1
+            font
+        `}>
+
+        </li>
+    )
+}
     
